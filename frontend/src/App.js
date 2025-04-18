@@ -16,7 +16,7 @@ const QuoteApp = () => {
   const [showToast, setShowToast] = useState(false);
   const [toastMessage, setToastMessage] = useState('');
   const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
-  const [authMode, setAuthMode] = useState('login'); // 'login' or 'register'
+  const [authMode, setAuthMode] = useState('login'); 
   const [authForm, setAuthForm] = useState({ username: '', email: '', password: '' });
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [user, setUser] = useState(null);
@@ -26,7 +26,6 @@ const QuoteApp = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [newQuote, setNewQuote] = useState({ content: '', author: '', category: '' });
 
-  // Check for saved token on load
   useEffect(() => {
     const savedToken = localStorage.getItem('token');
     const savedUser = localStorage.getItem('user');
